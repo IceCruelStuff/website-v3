@@ -1,9 +1,6 @@
 import React, {useState} from "react";
 import pako from "pako";
-
-enum Error {
-    InvalidCrashdump = "INVALID_CRASHDUMP"
-}
+import Error from "../utils/Error";
 
 function CrashdumpParser() {
     const [ error, setError ] = useState(null);
