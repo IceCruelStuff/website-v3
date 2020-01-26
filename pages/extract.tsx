@@ -43,11 +43,11 @@ function Extract() {
     };
 
     return (
-            <>
+            <form onSubmit={extractPhar}>
                 <label htmlFor="file">File</label>
-                <input id="file" type="file" onChange={handleFileChange} accept=".phar" />
-                <button onClick={extractPhar} disabled={files.length < 1}>Extract</button>
-            </>
+                <input id="file" type="file" onChange={handleFileChange} accept=".phar" required />
+                <button disabled={files.length < 1}>Extract</button>
+            </form>
     )
 }
 

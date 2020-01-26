@@ -43,13 +43,13 @@ function Create() {
     };
 
     return (
-            <>
+            <form onSubmit={createPhar}>
                 <label htmlFor="file">File</label>
-                <input id="file" type="file" onChange={handleFileChange} accept="application/zip" />
+                <input id="file" type="file" onChange={handleFileChange} accept="application/zip" required />
                 <label htmlFor="stub">Stub</label>
-                <input type="text" onChange={handleStubChange} value={stub} />
-                <button onClick={createPhar} disabled={files.length < 1}>Create</button>
-            </>
+                <input type="text" onChange={handleStubChange} value={stub} required />
+                <button type="submit" disabled={files.length < 1}>Create</button>
+            </form>
     )
 }
 
